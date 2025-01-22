@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gpa Calculator</title>
-    <link href="styles.css" rel="stylesheet" />
+    <title>Home - calcGPA</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,40 +20,18 @@
   </head>
   <body>
     <div class="container">
-      <div class="blob-outer-container">
-        <div class="blob-inner-container">
-          <div class="blob"></div>
-        </div>
-      </div>
-      <div class="main">
-        <h1>Gpa </br>Calculator</h1>
-        <div class="subject">
-          <div class="subject__row">
-            <input
-              class="subject__type"
-              id="0-name"
-              placeholder="Subject Name"
-            />
-            <input
-              class="subject__credit"
-              id="0-cr"
-              placeholder="Credit Hours"
-            />
-            <input class="dropbtn" id="0-grade" placeholder="Grade" />
-          </div>
-        </div>
-        <button class="add">+</button>
-        <button class="remove"><img src="delete.png" /></button>
-        <button class="clear">Clear</button>
-        <button class="calculate">Calculate</button>
-      </div>
-      <div class="modal hidden">
-        <button class="close-modal">&times;</button>
-        <h2>Your final GPA is:</h2>
-        <p class="gpa-text"></p>
-      </div>
-      <div class="overlay hidden"></div>
+      <div class="typewriter-text" id="typewriter"></div>
     </div>
-    <script src="script.js"></script>
+    <div class="left-section">
+      <h3>calcGPA</h3>
+      <button
+        id="startBtn"
+        class="start-btn"
+        onclick="window.location.href='home1.html';"
+      >
+        Get started
+      </button>
+    </div>
+    <script src="script2.js"></script>
   </body>
 </html>
