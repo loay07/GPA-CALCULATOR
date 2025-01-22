@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0a3a;
+}
+
+.container {
+  text-align: center;
+}
+
+.typewriter-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #e07ae6;
+  margin-bottom: 10rem;
+  margin-right: -40rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 6px solid #000000;
+  display: inline-block;
+  animation: typing 3s steps(12) 1, blinkCursor 0.8s step-end infinite;
+}
+
+.start-btn {
+  display: flex;
+  margin-top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 100px;
+  font-size: 17px;
+  background-color: #107fdf;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background-color: #0267c0;
+}
+
+.left-section {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-color: #000000;
+}
+h3 {
+  color: #e07ae6;
+  margin-left: 2.4rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 12ch;
+  }
+}
+@keyframes blinkCursor {
+  0% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #000000;
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
