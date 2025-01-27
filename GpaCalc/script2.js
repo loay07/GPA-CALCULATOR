@@ -18,5 +18,4 @@ function type() {
   }
 }
 
-// Start the typing effect immediately on page load
 window.onload = type;

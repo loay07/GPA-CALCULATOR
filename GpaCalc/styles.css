@@ -114,6 +114,7 @@ h1 {
   border-radius: 15px;
   overflow-y: scroll;
   width: 65%;
+  overflow-x: hidden;
 }
 .subject::-webkit-scrollbar {
   width: 12px;
