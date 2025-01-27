@@ -86,7 +86,8 @@ html {
 .main {
   padding: 1rem;
   width: 55%;
-  height: 35rem;
+  min-height: 35rem;
+  height: 70%;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.148);
   display: flex;
@@ -255,7 +256,7 @@ h1 {
 .calculate {
   position: absolute; /* Adjust the left position as needed */
   margin-left: 3rem;
-  margin-top: 25rem;
+  margin-top: 27rem;
   padding: 17px 40px;
   border-radius: 50px;
   cursor: pointer;
@@ -281,7 +282,7 @@ h1 {
 }
 .clear {
   position: absolute; /* Adjust the left position as needed */
-  margin-top: 20rem;
+  margin-top: 22rem;
   margin-left: 4.4rem;
   padding: 17px 40px;
   border-radius: 50px;
@@ -355,4 +356,189 @@ p {
   text-align: center;
   margin: 0;
   color: #153e50;
+}
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  width: 120px;
+  margin-top: 16.5rem;
+  margin-left: 4.9rem;
+}
+
+.dropdown button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 17px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+
+.dropdown button:hover {
+  background-color: #fdfffd;
+}
+
+.dropdown-content {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  background-color: rgb(185, 178, 178);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  transform-origin: top;
+  animation: dropdown-animation-open 0.3s ease-in-out;
+  width: 100%;
+}
+
+.dropdown-content button {
+  background-color: rgb(185, 178, 178);
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 5px;
+}
+
+.dropdown-content button:hover {
+  background-color: #989595;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: dropdown-animation-open 0.3s ease-in-out;
+}
+
+.dropdown-content:not(:hover) {
+  animation: dropdown-animation-close 0.3s ease-in-out;
+}
+
+@keyframes dropdown-animation-open {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes dropdown-animation-close {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+.custom-option {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 65%;
+  background-color: rgb(255, 255, 255);
+  padding: 6rem;
+  border-radius: 15px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+h3 {
+  text-align: center;
+  font-size: 27px;
+  margin-top: 0;
+}
+.options-container {
+  margin-top: 30px;
+  overflow-y: scroll;
+  height: 72%;
+  background: rgb(232, 232, 232);
+  padding: 1rem 2rem;
+
+  border-radius: 15px;
+}
+.options-container span {
+  height: 8%;
+  display: block;
+  padding: 3rem;
+  font-size: 30px;
+  border-bottom: #bdbdbd 1px solid;
+}
+.grade-input {
+  display: flex;
+  margin-left: auto;
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -70px;
+  border: none;
+  border-radius: 15px;
+  background-color: #baaeae;
+  font-size: 30px;
+  text-align: center;
+}
+.save {
+  position: absolute;
+  left: 77%;
+  top: 88%;
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  color: white;
+  background-color: hsl(238, 71%, 57%);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 3px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+.save:hover {
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+.save:active {
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+.close-options {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.error {
+  color: red;
+  margin-top: 60px;
+  opacity: 0;
+}
+.current-system {
+  position: absolute;
+  top: 90%;
+  left: 3.5rem;
+  font-weight: 600;
+}
+.current-system a {
+  color: #109729;
 }
