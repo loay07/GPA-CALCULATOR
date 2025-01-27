@@ -87,6 +87,7 @@ saveBtn.addEventListener("click", () => {
       validInput = false;
       gr.style.backgroundColor = "#ee7272";
       errorText.style.opacity = 1;
+      currentSystem = AmericanGrades;
     } else {
       gr.style.backgroundColor = "#baaeae";
     }
